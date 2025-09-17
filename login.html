@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Wifi Zone- Login</title>
+		<meta name="viewport" content="initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="css/modern-ui.css">
+		<link rel="stylesheet" type="text/css" href="css/pricing-buttons.css">
+		<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+		<meta charset="utf-8">
+		<style>
+			/* ==================================================== */
+			/* STYLES CONFORMES À LA CHARTE GRAPHIQUE MODERNE      */
+			/* ==================================================== */
+
+			/* Conteneur principal avec fond moderne */
+			.body {
+				background: linear-gradient(135deg, #768fb5 0%, #c3cfe2 100%);
+				min-height: 10vh;
+				font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			}
+
+			/* Boîte de connexion moderne */
+			.login-box {
+				background: #ffffff;
+				border-radius: 25px;
+				box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+				max-width: 400px;
+				margin: 0 auto;
+				padding: 30px;
+				position: relative;
+			}
+
+			/* Icône WiFi en haut - style orange/jaune */
+			.wifi-icon {
+				color: #FF9500;
+				font-size: 60px;
+				margin-bottom: 20px;
+				display: block;
+				text-align: center;
+				text-shadow: 0 3px 6px rgba(255, 149, 0, 0.3);
+			}
+
+			/* Message d'instruction principal - 30px selon préférence */
+			.instruction-text {
+				font-size: 30px !important;
+				color: #333;
+				text-align: center;
+				margin: 20px 0;
+				font-weight: 500;
+				line-height: 1.3;
+			}
+
+			/* Boutons de sélection modernes */
+			.selection-buttons {
+				display: flex;
+				gap: 10px;
+				margin: 25px 0;
+				justify-content: center;
+			}
+
+			.selection-btn {
+				flex: 1;
+				padding: 15px 20px;
+				border: none;
+				border-radius: 25px;
+				font-size: 16px;
+				font-weight: 600;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				position: relative;
+				overflow: hidden;
+			}
+
+			/* Bouton "J'ai un ticket" - Bleu */
+			.selection-btn.ticket {
+				background: #05253b;
+				color: white;
+				box-shadow: 0 8px 15px rgba(93, 173, 226, 0.3);
+			}
+
+			.selection-btn.ticket:hover {
+				background: #125e90;
+				transform: translateY(-2px);
+				box-shadow: 0 12px 20px rgba(93, 173, 226, 0.4);
+			}
+
+			/* Bouton "J'ai un compte" - Vert */
+			.selection-btn.account {
+				background: #046c0d;
+				color: white;
+				box-shadow: 0 8px 15px rgba(88, 214, 141, 0.3);
+			}
+
+			.selection-btn.account:hover {
+				background: #45B574;
+				transform: translateY(-2px);
+				box-shadow: 0 12px 20px rgba(88, 214, 141, 0.4);
+			}
+
+			/* État actif pour les boutons */
+			.selection-btn.active {
+				transform: translateY(-2px);
+				box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+			}
+
+			/* Champs de saisie modernes - 16px selon préférence */
+			.modern-input {
+				width: 100%;
+				box-sizing: border-box;
+				padding: 15px 20px;
+				padding-left: 50px;
+				background: #F8F9FA;
+				border: 2px solid #E9ECEF;
+				border-radius: 15px;
+				color: #160267;
+				font-size: 16px !important;
+				transition: all 0.3s ease;
+				outline: none;
+				margin-bottom: 15px;
+				position: relative;
+			}
+
+			/* Icônes dans les champs */
+			.input-container {
+				position: relative;
+				margin-bottom: 15px;
+			}
+
+			.input-icon {
+				position: absolute;
+				left: 15px;
+				top: 50%;
+				transform: translateY(-50%);
+				color: #02294b;
+				font-size: 18px;
+				z-index: 2;
+			}
+
+			/* États des champs */
+			.modern-input:focus {
+				border: 2px solid #5DADE2;
+				background: #FFFFFF;
+				box-shadow: 0 0 15px rgba(93, 173, 226, 0.2);
+				transform: translateY(-1px);
+			}
+
+			.modern-input:focus + .input-icon {
+				color: #5DADE2;
+			}
+
+			/* Bouton de connexion principal */
+			.connect-button {
+				width: 100%;
+				padding: 18px;
+				background: linear-gradient(135deg, #5DADE2 0%, #3F8FBF 100%);
+				color: white;
+				border: none;
+				border-radius: 15px;
+				font-size: 18px;
+				font-weight: 600;
+				text-transform: uppercase;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				margin: 20px 0;
+				box-shadow: 0 8px 20px rgba(93, 173, 226, 0.3);
+			}
+
+			.connect-button:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 12px 25px rgba(93, 173, 226, 0.4);
+			}
+
+			/* Boutons d'action en bas avec icônes 25px */
+			.action-buttons {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 10px;
+				margin-top: 25px;
+			}
+
+			.action-btn {
+				padding: 12px 15px;
+				border: none;
+				border-radius: 12px;
+				font-size: 14px;
+				font-weight: 500;
+				cursor: pointer;
+				transition: all 0.3s ease;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				gap: 8px;
+			}
+
+			/* Icônes 25px selon préférence */
+			.action-btn i {
+				font-size: 25px !important;
+			}
+
+			/* Styles spécifiques pour chaque bouton d'action */
+			.action-btn.buy-ticket {
+				background: #E74C3C;
+				color: white;
+			}
+
+			.action-btn.get-ticket {
+				background: #28B463;
+				color: white;
+			}
+
+			.action-btn.home {
+				background: #3498DB;
+				color: white;
+			}
+
+			.action-btn.status {
+				background: #58D68D;
+				color: white;
+			}
+
+			.action-btn.disconnect {
+				background: #95A5A6;
+				color: white;
+			}
+
+			.action-btn.pricing {
+				background: #9B59B6;
+				color: white;
+			}
+
+			.action-btn.contact {
+				background: #1ABC9C;
+				color: white;
+			}
+
+			.action-btn.info {
+				background: #F39C12;
+				color: white;
+			}
+
+			.action-btn.test {
+				background: #E67E22;
+				color: white;
+			}
+
+			/* Effets de survol */
+			.action-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+			}
+
+			/* Styles supplémentaires pour l'interface moderne */
+			.form-section {
+				margin: 20px 0;
+			}
+
+			/* Masquer les anciens éléments */
+			.subform {
+				display: none !important;
+			}
+
+			/* Message de succès moderne */
+			.success-message {
+				background: linear-gradient(135deg, #2ECC71, #27AE60);
+				color: white;
+				padding: 20px;
+				border-radius: 15px;
+				margin: 20px 0;
+				text-align: center;
+				box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3);
+				display: none;
+			}
+
+			/* Animation pour l'interface */
+			@keyframes fadeInUp {
+				0% {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+				100% {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.login-box {
+				animation: fadeInUp 0.8s ease-out;
+			}
+
+			/* Responsive pour mobile */
+			@media (max-width: 768px) {
+				.login-box {
+					margin: 20px;
+					padding: 20px;
+				}
+				
+				.instruction-text {
+					font-size: 24px !important;
+				}
+				
+				.selection-buttons {
+					flex-direction: column;
+					gap: 15px;
+				}
+				
+				.action-buttons {
+					grid-template-columns: 1fr;
+					gap: 15px;
+				}
+				
+				.action-btn {
+					padding: 15px;
+					font-size: 16px;
+				}
+			}
+
+			/* Styles pour la page de succès */
+			.success-box {
+				background: linear-gradient(135deg, #2d5a3d, #4CAF50);
+				border-radius: 15px;
+				box-shadow: 0 10px 30px rgba(76, 175, 80, 0.3);
+				animation: successFadeIn 0.8s ease-in-out;
+			}
+
+			.success-box .header {
+				text-align: center;
+				padding: 30px;
+			}
+
+			.success-box .welcome-text {
+				color: #fff !important;
+				font-size: 28px;
+				font-weight: bold;
+				margin: 20px 0;
+				text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+			}
+
+			.success-box .speech {
+				color: #fff !important;
+				font-size: 18px !important;
+				font-weight: bold !important;
+				margin: 20px 0;
+				text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+			}
+
+			.success-box .contact-btn {
+				background: #388E3C !important;
+				border: 2px solid #388E3C !important;
+				color: white !important;
+				padding: 12px 25px;
+				border-radius: 25px;
+				text-decoration: none;
+				font-weight: bold;
+				transition: all 0.3s ease;
+				display: inline-block;
+				margin: 5px;
+				box-shadow: 0 4px 15px rgba(56, 142, 60, 0.4);
+				min-width: 140px;
+				text-align: center;
+			}
+
+			.success-box .contact-btn:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+			}
+
+			/* Styles spécifiques pour chaque bouton social */
+			.success-box .contact-btn.youtube:hover {
+				background: #CC0000 !important;
+			}
+
+			.success-box .contact-btn.facebook:hover {
+				background: #166FE5 !important;
+			}
+
+			.success-box .contact-btn.snapchat:hover {
+				background: #F7EC09 !important;
+				border-color: #F7EC09 !important;
+			}
+
+			.success-box .contact-btn.instagram:hover {
+				background: linear-gradient(45deg, #e08428 0%,#d5582f 25%,#c9243a 50%,#b51f5c 75%,#a91079 100%) !important;
+			}
+
+			/* Icônes colorées pour les boutons sociaux */
+			.success-box .contact-btn .fa-globe {
+				color: #4CAF50;
+			}
+
+			.success-box .contact-btn.youtube .fa-youtube-play {
+				color: #FF0000;
+				text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+			}
+
+			.success-box .contact-btn.facebook .fa-facebook {
+				color: #1877F2;
+				text-shadow: 0 0 5px rgba(24, 119, 242, 0.5);
+			}
+
+			.success-box .contact-btn.snapchat .fa-snapchat-ghost {
+				color: #FFFC00;
+				text-shadow: 0 0 5px rgba(255, 252, 0, 0.8);
+			}
+
+			.success-box .contact-btn.instagram .fa-instagram {
+				color: #E4405F;
+				text-shadow: 0 0 5px rgba(228, 64, 95, 0.5);
+			}
+
+			/* Container pour organiser les boutons */
+			.navigation-buttons {
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 10px;
+				margin-top: 20px;
+			}
+
+			/* Animation pour l'apparition de la page de succès */
+			@keyframes successFadeIn {
+				0% {
+					opacity: 0;
+					transform: scale(0.8) translateY(20px);
+				}
+				100% {
+					opacity: 1;
+					transform: scale(1) translateY(0);
+				}
+			}
+
+			/* Icône de succès animee */
+			.success-box .fa-check-circle {
+				animation: checkPulse 2s infinite;
+			}
+
+			@keyframes checkPulse {
+				0%, 100% {
+					transform: scale(1);
+				}
+				50% {
+					transform: scale(1.1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+
+		<!--  -->
+		<div class="overlay"></div>
+		
+		<!--  -->
+		<div class="body">
+			<div class="big-box">
+				<div class="login-box page">
+					<div class="header">
+						<!-- Icône WiFi moderne -->
+						<i class="fa fa-wifi wifi-icon"></i>
+						
+						<!-- Image de marque 
+						<div class="brand-logo">
+							<img src="images/brand.png" alt="Logo de marque" class="brand-image">
+						</div>-->
+						
+						<!-- Message d'instruction principal -->
+						<p class="instruction-text">
+							Entrez vos informations de connexion !!
+						</p>
+									
+						<!-- Boutons de sélection modernes -->
+						<div class="selection-buttons">
+							<button class="selection-btn ticket active" onclick="selectMode('ticket')">
+								<i class="fa fa-ticket"></i> J'ai un ticket
+							</button>
+							<button class="selection-btn account" onclick="selectMode('account')">
+								<i class="fa fa-user"></i> J'ai un compte
+							</button>
+					</div>
+									
+					<!-- Formulaire moderne -->
+					<div class="modern-form">
+						<form action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif) name="loginform" class="goform">
+											
+							<!-- Zone de saisie pour le ticket -->
+							<div id="ticket-form" class="form-section">
+								<div class="input-container">
+									<i class="fa fa-ticket input-icon"></i>
+									<input type="text" name="voucher" class="modern-input" placeholder="Code ticket" onfocus="emptyOthersField(this)" oninput="addTypingStyle(this)" onblur="removeTypingStyle(this)">
+								</div>
+							</div>
+											
+							<!-- Zone de saisie pour le compte -->
+							<div id="account-form" class="form-section" style="display: none;">
+								<div class="input-container">
+									<i class="fa fa-user input-icon"></i>
+									<input type="text" name="username" class="modern-input" placeholder="Nom d'utilisateur" onfocus="emptyOthersField(this)" oninput="addTypingStyle(this)" onblur="removeTypingStyle(this)">
+								</div>
+								<div class="input-container">
+									<i class="fa fa-lock input-icon"></i>
+									<input type="password" name="password" class="modern-input" placeholder="Mot de passe" onfocus="emptyOthersField(this)" oninput="addTypingStyle(this)" onblur="removeTypingStyle(this)">
+								</div>
+							</div>
+											
+							<!-- Bouton de connexion -->
+							<button type="submit" class="connect-button">
+								<i class="fa fa-sign-in"></i> APPUYER POUR CONNECTER
+							</button>
+						</form>
+										
+						<!-- Boutons d'action en bas -->
+						<div class="action-buttons">
+							<a href="https://ticketwifi.com/tickets/pay_ticket/2115" target="_blank" class="action-btn buy-ticket">
+								<i class="fa fa-credit-card"></i> Acheter Ticket
+							</a>
+							<a href="https://ticketwifi.com/tickets/get_my_ticket/" target="_blank" class="action-btn get-ticket">
+								<i class="fa fa-download"></i> Récupérer Ticket
+							</a>
+							<a href="login.html" onclick="showHome()" class="action-btn home">
+								<i class="fa fa-home"></i> Accueil
+							</a>
+							<a href="status.html" onclick="showStatus()" class="action-btn status">
+								<i class="fa fa-bar-chart"></i> Status
+							</a>
+							<a href="logout.html" onclick="disconnect()" class="action-btn disconnect">
+								<i class="fa fa-power-off"></i> Déconnecter
+							</a>
+							<a href="package.html" onclick="showPricing()" class="action-btn pricing">
+								<i class="fa fa-tags"></i> Tarifs
+							</a>
+							<!--<a href="https://wa.me/+2250747190514" target="_blank" class="action-btn contact">
+								<i class="fa fa-whatsapp"></i> Contactez nous
+							</a>-->
+							<a href="about.html" onclick="showInfo()" class="action-btn info">
+								<i class="fa fa-info-circle"></i> Infos & Aide
+							</a>
+							<a href="https://ticketwifi.com/tickets/pay_ticket/2115" target="_blank" class="action-btn test">
+								<i class="fa fa-gift"></i> Tester gratuit
+							</a>
+						</div>
+					</div>
+				</div>
+			 <!--$(if error) -->
+				<div class="error-box page $(if error) active $(endif)">
+					<div class="header">
+						<h2 class="big-icon">
+							<img src="images/logo.png" style="width: 30px;" alt="Error Logo">
+						</h2>
+						<h3 class="welcome-text">Erreur !</h3>
+						<p class="speech">
+							Il semblerait qu'une erreur soit survenue !!!<br>
+							$(if error) 
+							<script 
+											type="text/javascript">
+								            var error = "$(error)";
+									        if (error == "simultaneous session limit reached") {
+										    document.write("Accès refusé !!! Votre compte est déjà en cours d'utilisation ");
+									    	}
+											else if (error == "invalid password") {
+											document.write("Accès refusé !!! Votre mot de passe est invalide, vérifier le à nouveau ");
+											}
+											else if (error == "no valid profile found") {
+											document.write("Votre compte a expiré, merci de contacter le gerant ");
+											}
+											else if(error.search("not found") != -1) {
+											document.write("Informations incorrectes. Aucune donnée utilisateur n'a été trouvée");
+											}
+											else document.write("$(error)<br />")
+							</script> 
+
+							$(endif)
+						</p>
+						<a href="#" onclick="changePage('login-box')">Revenir au formulaire</a>
+					</div>
+				</div>
+				<!-- $(endif) -->
+			</div>
+			<div class="copyright">
+				Conception <i class="fa fa-heart"></i> par <a href="https://swservice.carrd.co/" target="_blank">swservice</a>
+			</div>
+		</div>
+
+		<!--  -->
+		<div class="hidden">
+			<input type="hidden" name="dst" value="$(link-orig)" />
+			<input type="hidden" name="popup" value="true" />
+		</div>
+
+		<!-- Scripts Mikrotik pour l'authentification sécurisée -->
+		$(if chap-id)
+			<!-- Formulaire caché pour l'envoi sécurisé des données de connexion -->
+			<form name="sendin" action="$(link-login-only)" method="post">
+				<input type="hidden" name="username" />
+				<input type="hidden" name="password" />
+				<input type="hidden" name="dst" value="$(link-orig)" />
+				<input type="hidden" name="popup" value="true" />
+			</form>
+			
+			<!-- Inclusion de la bibliothèque MD5 pour le hachage -->
+			<script type="text/javascript" src="assets/md5.js"></script>
+			<script type="text/javascript">
+
+			    // Fonction pour sélectionner le mode de connexion
+			    function selectMode(mode) {
+			    	// Mettre à jour les boutons
+			    	document.querySelectorAll('.selection-btn').forEach(btn => {
+			    		btn.classList.remove('active');
+			    	});
+			    				
+			    	if (mode === 'ticket') {
+			    		document.querySelector('.selection-btn.ticket').classList.add('active');
+			    		document.getElementById('ticket-form').style.display = 'block';
+			    		document.getElementById('account-form').style.display = 'none';
+			    	} else {
+			    		document.querySelector('.selection-btn.account').classList.add('active');
+			    		document.getElementById('ticket-form').style.display = 'none';
+			    		document.getElementById('account-form').style.display = 'block';
+			    	}
+			    }
+			    
+			    // Fonctions pour les boutons d'action
+			    function showHome() {
+			    	// Recharger la page d'accueil
+			    	window.location.reload();
+			    }
+			    
+			    function showStatus() {
+			    	window.open('status.html', '_blank');
+			    }
+			    
+			    function disconnect() {
+			    	window.open('logout.html', '_blank');
+			    }
+			    
+			    function showPricing() {
+			    	// Ouvrir la page des tarifs
+			    	window.open('package.html', '_blank');
+			    }
+			    
+			    function showInfo() {
+			    	// Ouvrir la page d'informations
+			    	window.open('about.html', '_blank');
+			    }
+			    
+			    // Fonction doLogin mise à jour pour la nouvelle interface
+			    function doLogin() {
+			    	// Vérification si l'utilisateur utilise nom d'utilisateur/mot de passe
+			    	if (document.loginform.username.value.length || document.loginform.password.value.length) {
+			    		// Copie du nom d'utilisateur
+			    		document.sendin.username.value = document.loginform.username.value;
+						// Hachage MD5 du mot de passe avec challenge Mikrotik
+						document.sendin.password.value = hexMD5('$(chap-id)' + document.loginform.password.value + '$(chap-challenge)');
+			    	}
+			    	else {
+			    		// Utilisation du code voucher comme nom d'utilisateur
+			    		document.sendin.username.value = document.loginform.voucher.value;
+						
+						// Hachage MD5 du voucher avec challenge Mikrotik
+						document.sendin.password.value = hexMD5('$(chap-id)' + document.loginform.voucher.value + '$(chap-challenge)');
+			    	}
+					// Soumission du formulaire sécurisé
+					document.sendin.submit();
+					return false;
+			    }
+
+			    // Fonction pour vider les autres champs lors de la saisie
+			    function emptyOthersField(me) {
+			    	// Si l'utilisateur saisit nom d'utilisateur/mot de passe, vider le champ voucher
+			    	if (['username', 'password'].indexOf(me.name) != -1) {
+			    		document.loginform.voucher.value = '';
+			    		// Retirer la classe typing du champ voucher
+			    		document.loginform.voucher.classList.remove('typing');
+			    	}
+			    	else {
+			    		// Si l'utilisateur saisit un voucher, vider nom d'utilisateur/mot de passe
+			    		document.loginform.username.value = '';
+			    		document.loginform.password.value = '';
+			    		// Retirer la classe typing des champs username et password
+			    		document.loginform.username.classList.remove('typing');
+			    		document.loginform.password.classList.remove('typing');
+			    	}
+			    }
+
+			    // Fonction pour ajouter le style de saisie (gras bleu)
+			    function addTypingStyle(element) {
+			    	if (element.value.length > 0) {
+			    		element.classList.add('typing');
+			    	}
+			    }
+
+			    // Fonction pour retirer le style de saisie si le champ est vide
+			    function removeTypingStyle(element) {
+			    	if (element.value.length === 0) {
+			    		element.classList.remove('typing');
+			    	}
+			    }
+
+			    // Fonction pour afficher le message de succès sur la page principale
+			    function showSuccessMessage() {
+			    	// Afficher le message de succès intégré
+			    	var successMessage = document.getElementById('success-message');
+			    	if (successMessage) {
+			    		successMessage.style.display = 'block';
+			    		// Animation d'apparition
+			    		successMessage.style.opacity = '0';
+			    		successMessage.style.transform = 'scale(0.8)';
+			    		successMessage.style.transition = 'all 0.5s ease';
+			    		
+			    		setTimeout(function() {
+			    			successMessage.style.opacity = '1';
+			    			successMessage.style.transform = 'scale(1)';
+			    		}, 100);
+			    	}
+			    }
+
+			    // Vérifier si on doit afficher le message de succès au chargement
+			    function checkForSuccessParam() {
+			    	var urlParams = new URLSearchParams(window.location.search);
+			    	if (urlParams.get('success') === '1' || urlParams.get('connected') === '1') {
+			    		showSuccessMessage();
+			    		return true;
+			    	}
+			    	return false;
+			    }
+
+			    // Fonction globale pour afficher le message (compatible avec l'ancienne API)
+			    function displaySuccessMessage() {
+			    	showSuccessMessage();
+			    }
+
+			</script>
+		$(endif)
+		<!-- Fin des scripts Mikrotik -->
+		<!-- Inclusion des bibliothèques JavaScript nécessaires -->
+		<script type="text/javascript" src="assets/md5.js"></script>
+		<script type="text/javascript" src="assets/jquery.min.js"></script>
+		<script type="text/javascript" src="assets/config.js"></script>
+		<script type="text/javascript" src="assets/main.js"></script>
+		<!-- Script d'initialisation en cas d'absence d'erreur -->
+		$(if error == "")
+		<script type="text/javascript">
+			$(function () {
+				// Vérifier d'abord s'il faut afficher le message de succès
+				if (!checkForSuccessParam()) {
+					// Affichage de la boîte de connexion par défaut
+					changePage('login-box');
+				} else {
+					// Afficher la page de connexion avec le message de succès
+					changePage('login-box');
+				}
+			});
+		</script>
+		$(endif)
+		<!-- Script d'initialisation en cas d'erreur -->
+		$(if error)
+		<script type="text/javascript">
+			$(function () {
+				// Affichage de la page d'erreur
+				changePage();
+			});
+		</script>
+		$(endif)
+		<!-- Script de chargement de la configuration -->
+		<script type="text/javascript">
+			$(function () {
+
+				
+				// Fonction globale pour afficher le message de succès
+				window.displaySuccessMessage = function() {
+					showSuccessPage();
+				};
+			});
+
+
+		</script>
+	</body>
+</html>

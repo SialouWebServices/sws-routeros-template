@@ -1,0 +1,130 @@
+{
+  "name": "sws-routeros-template",
+  "version": "2.0.0",
+  "description": "Template moderne et responsive pour portail captif MikroTik avec interface glassmorphism et authentification double",
+  "keywords": [
+    "mikrotik",
+    "hotspot",
+    "captive-portal",
+    "wifi",
+    "template",
+    "responsive",
+    "glassmorphism",
+    "modern-ui",
+    "routeros",
+    "authentication",
+    "ticket-system",
+    "pricing"
+  ],
+  "homepage": "https://github.com/SialouWebServices/sws-routeros-template",
+  "bugs": {
+    "url": "https://github.com/SialouWebServices/sws-routeros-template/issues"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "SW Service",
+    "email": "contact@swservice.com",
+    "url": "https://swservice.carrd.co/"
+  },
+  "contributors": [
+    {
+      "name": "SW Service Team",
+      "email": "contact@swservice.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SialouWebServices/sws-routeros-template.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "last 3 Chrome versions",
+    "last 3 Firefox versions",
+    "last 3 Safari versions",
+    "last 2 Edge versions",
+    "iOS >= 12",
+    "Android >= 5"
+  ],
+  "scripts": {
+    "dev": "http-server . -p 8080 -o",
+    "serve": "python -m http.server 8080",
+    "lint:css": "stylelint 'css/**/*.css'",
+    "lint:html": "htmlhint '*.html'",
+    "optimize:images": "imagemin images/* --out-dir=images/optimized",
+    "build": "npm run lint:css && npm run lint:html",
+    "test": "echo 'Utilisez un serveur local pour tester le template'",
+    "deploy:mikrotik": "echo 'Uploadez manuellement les fichiers sur votre routeur MikroTik'"
+  },
+  "devDependencies": {
+    "http-server": "^14.1.1",
+    "stylelint": "^14.16.1",
+    "stylelint-config-standard": "^29.0.0",
+    "htmlhint": "^1.1.4",
+    "imagemin": "^8.0.1",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-mozjpeg": "^10.0.0"
+  },
+  "mikrotik": {
+    "compatibleVersions": ["6.40+", "7.x"],
+    "requiredFeatures": ["hotspot", "user-manager"],
+    "htmlDirectory": "hotspot",
+    "loginMethods": ["cookie", "http-chap", "http-pap"]
+  },
+  "features": {
+    "responsive": true,
+    "modernUI": true,
+    "glassmorphism": true,
+    "dualAuthentication": true,
+    "pricingIntegration": true,
+    "multiLanguage": {
+      "supported": ["fr"],
+      "planned": ["en", "es"]
+    },
+    "accessibility": {
+      "wcag": "AA",
+      "keyboardNavigation": true,
+      "screenReader": true
+    }
+  },
+  "technical": {
+    "cssFramework": "Custom with CSS Variables",
+    "jsLibraries": ["jQuery", "Font Awesome"],
+    "performance": {
+      "loadTime": "<3s",
+      "mobileOptimized": true,
+      "imageOptimization": true
+    },
+    "security": {
+      "xssProtection": true,
+      "chapSupport": true,
+      "inputValidation": true
+    }
+  },
+  "customization": {
+    "logo": {
+      "desktop": "120x80px",
+      "mobile": "100x65px"
+    },
+    "colors": "CSS Variables",
+    "typography": {
+      "instructionSize": "30px",
+      "inputSize": "16px",
+      "iconSize": "25px"
+    },
+    "branding": "Fully customizable"
+  },
+  "support": {
+    "documentation": "DOCUMENTATION.md",
+    "examples": "screenshots/",
+    "community": "GitHub Issues",
+    "commercial": "contact@swservice.com"
+  },
+  "changelog": "CHANGELOG.md",
+  "contributing": "CONTRIBUTING.md",
+  "funding": {
+    "type": "custom",
+    "url": "https://swservice.carrd.co/"
+  }
+}

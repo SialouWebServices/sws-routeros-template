@@ -1,0 +1,477 @@
+/* ==================================================== */
+/* STYLES MODERNES CONFORMES À LA CHARTE GRAPHIQUE     */
+/* Tailles préférées: texte 30px, champs 16px, icônes 25px */
+/* ==================================================== */
+
+/* Variables CSS pour cohérence */
+:root {
+  --primary-blue: #5DADE2;
+  --primary-green: #58D68D;
+  --primary-orange: #FF9500;
+  --text-dark: #333;
+  --text-light: #6C757D;
+  --background-light: #F8F9FA;
+  --border-light: #E9ECEF;
+  --shadow-light: rgba(0,0,0,0.1);
+  --border-radius: 15px;
+  --transition: all 0.3s ease;
+  
+  /* Tailles préférées selon mémoire utilisateur */
+  --instruction-size: 18px;
+  --input-size: 16px;
+  --icon-size: 25px;
+}
+
+/* Reset et base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #2c3e50;
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4)), url('../images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* Conteneur principal moderne */
+.body {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.big-box {
+  width: 100%;
+  max-width: 450px;
+  margin: 0 auto;
+}
+
+/* Boîte de connexion moderne */
+.login-box {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 25px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  padding: 40px 30px;
+  position: relative;
+  animation: fadeInUp 0.8s ease-out;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Icône WiFi en haut */
+.wifi-icon {
+  color: var(--primary-orange);
+  font-size: 60px;
+  margin-bottom: 15px;
+  display: block;
+  text-align: center;
+  text-shadow: 0 3px 6px rgba(255, 149, 0, 0.3);
+  animation: pulse 2s infinite;
+}
+
+/* Logo de marque */
+.brand-logo {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.brand-image {
+  max-width: 120px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  transition: var(--transition);
+}
+
+.brand-image:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.15));
+}
+
+/* Message d'instruction - 30px selon préférence */
+.instruction-text {
+  font-size: var(--instruction-size) !important;
+  color: var(--text-dark);
+  text-align: center;
+  margin: 15px 0 25px 0;
+  font-weight: 500;
+  line-height: 1.3;
+}
+
+/* Boutons de sélection modernes */
+.selection-buttons {
+  display: flex;
+  gap: 12px;
+  margin: 25px 0 30px 0;
+  justify-content: center;
+}
+
+.selection-btn {
+  flex: 1;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 55px;
+}
+
+/* Icônes des boutons de sélection - 25px selon préférence */
+.selection-btn i {
+  font-size: var(--icon-size) !important;
+}
+
+/* Bouton "J'ai un ticket" - Bleu */
+.selection-btn.ticket {
+  background: var(--primary-blue);
+  color: white;
+  box-shadow: 0 8px 15px rgba(93, 173, 226, 0.3);
+}
+
+.selection-btn.ticket:hover,
+.selection-btn.ticket.active {
+  background: #3F8FBF;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(93, 173, 226, 0.4);
+}
+
+/* Bouton "J'ai un compte" - Vert */
+.selection-btn.account {
+  background: var(--primary-green);
+  color: white;
+  box-shadow: 0 8px 15px rgba(88, 214, 141, 0.3);
+}
+
+.selection-btn.account:hover,
+.selection-btn.account.active {
+  background: #45B574;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px rgba(88, 214, 141, 0.4);
+}
+
+/* Sections de formulaire */
+.form-section {
+  margin: 25px 0;
+}
+
+/* Conteneurs d'input avec icônes */
+.input-container {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-light);
+  font-size: 18px;
+  z-index: 2;
+  transition: var(--transition);
+}
+
+/* Icônes des champs de saisie légèrement plus petites que les boutons */
+.input-icon {
+  font-size: 20px !important;
+}
+
+/* Champs de saisie modernes - 16px selon préférence */
+.modern-input {
+  width: 100%;
+  padding: 18px 20px 18px 50px;
+  background: rgba(248, 249, 250, 0.95);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 2px solid var(--border-light);
+  border-radius: var(--border-radius);
+  color: var(--text-dark);
+  font-size: var(--input-size) !important;
+  transition: var(--transition);
+  outline: none;
+  font-weight: 500;
+}
+
+.modern-input::placeholder {
+  color: var(--text-light);
+  font-weight: 400;
+}
+
+.modern-input:focus {
+  border: 2px solid var(--primary-blue);
+  background: #ffffff;
+  box-shadow: 0 0 15px rgba(93, 173, 226, 0.2);
+  transform: translateY(-1px);
+}
+
+.modern-input:focus + .input-icon {
+  color: var(--primary-blue);
+}
+
+/* Bouton de connexion principal */
+.connect-button {
+  width: 100%;
+  padding: 18px;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, #093754 100%);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: var(--transition);
+  margin: 25px 0;
+  box-shadow: 0 8px 20px rgba(93, 173, 226, 0.3);
+  letter-spacing: 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.connect-button i {
+  font-size: var(--icon-size) !important;
+}
+
+.connect-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(93, 173, 226, 0.4);
+}
+
+.connect-button:active {
+  transform: translateY(0);
+}
+
+/* Grille de boutons d'action avec icônes 25px */
+.action-buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.action-btn {
+  padding: 12px 8px;
+  border: none;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  min-height: 70px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Icônes 25px selon préférence */
+.action-btn i {
+  font-size: var(--icon-size) !important;
+}
+
+/* Couleurs uniques et distinctives pour chaque bouton */
+.action-btn.buy-ticket { background: #E74C3C; } /* Rouge vif - Acheter Ticket */
+.action-btn.get-ticket { background: #3498DB; } /* Bleu royal - Récupérer Ticket */
+.action-btn.home { background: #27AE60; } /* Vert émeraude - Accueil */
+.action-btn.status { background: #F39C12; } /* Orange doré - Status */
+.action-btn.disconnect { background: #C0392B; } /* Rouge foncé - Déconnecter */
+.action-btn.pricing { background: #8E44AD; } /* Violet améthyste - Tarifs */
+.action-btn.contact { background: #16A085; } /* Turquoise - Contact WhatsApp */
+.action-btn.info { background: #2980B9; } /* Bleu foncé - Infos */
+.action-btn.test { background: #D68910; } /* Orange ambré - Tester gratuit */
+
+/* Effets de survol pour tous les boutons d'action */
+.action-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* Message de succès moderne */
+.success-message {
+  background: linear-gradient(135deg, #2ECC71, #27AE60);
+  color: white;
+  padding: 25px;
+  border-radius: var(--border-radius);
+  margin: 20px 0;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(46, 204, 113, 0.3);
+  display: none;
+  animation: slideInFromTop 0.5s ease-out;
+}
+
+/* Copyright */
+.copyright {
+  text-align: center;
+  margin-top: 20px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.copyright a {
+  color: var(--primary-blue);
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes slideInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Masquer les anciens éléments */
+.togglers,
+.subform,
+.wrapper.is_account,
+.wrapper.is_vaucher,
+.logger {
+  display: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .body {
+    padding: 15px;
+  }
+  
+  .login-box {
+    padding: 30px 20px;
+    margin: 10px;
+  }
+  
+  .instruction-text {
+    font-size: 24px !important;
+  }
+  
+  .selection-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .action-buttons {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .action-btn {
+    padding: 15px 10px;
+    font-size: 13px;
+    min-height: 80px;
+  }
+  
+  .wifi-icon {
+    font-size: 50px;
+  }
+  
+  /* Image de marque responsive */
+  .brand-image {
+    max-width: 100px;
+    max-height: 65px;
+  }
+}
+
+@media (max-width: 480px) {
+  .instruction-text {
+    font-size: 20px !important;
+  }
+  
+  .modern-input {
+    font-size: 15px !important;
+  }
+  
+  .connect-button {
+    font-size: 16px;
+  }
+  
+  .action-buttons {
+    grid-template-columns: 1fr;
+  }
+  
+  .action-btn i {
+    font-size: 22px !important;
+  }
+}
+
+/* États de focus améliorés pour l'accessibilité */
+.selection-btn:focus,
+.modern-input:focus,
+.connect-button:focus,
+.action-btn:focus {
+  outline: 3px solid rgba(93, 173, 226, 0.3);
+  outline-offset: 2px;
+}
+
+/* Mode sombre (optionnel) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-dark: #ffffff;
+    --text-light: #a0a0a0;
+    --background-light: #2a2a2a;
+    --border-light: #404040;
+  }
+  
+  body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  }
+  
+  .login-box {
+    background: #1e1e1e;
+    border: 1px solid #404040;
+  }
+}

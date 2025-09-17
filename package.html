@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta Tags -->
+	<title>$(identity) - Tarifs</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	
+	<!-- CSS Stylesheets -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/extras.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">
+	<link rel="stylesheet" type="text/css" href="css/pricing-buttons.css">
+</head>
+<body>
+	<!-- Conteneur principal -->
+	<div class="limiter">
+		<!-- Navigation Header -->
+		<nav style="margin-bottom: 0" class="navbar navbar-default">
+			<div class="container">
+				<!-- Brand et bouton mobile -->
+				<div class="navbar-header">
+					<!-- Bouton menu mobile -->
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar top-bar"></span>
+						<span class="icon-bar middle-bar"></span>
+						<span class="icon-bar bottom-bar"></span>
+					</button>
+					<!-- Logo brand -->
+					<a style="padding-top: 8px" class="navbar-brand" href="login.html">
+						<img style="margin-top: -2px" width="50" alt="logo" src="images/brand.png" class="img-responsive">
+					</a>
+				</div>
+				<!-- Menu de navigation -->
+				<div class="collapse navbar-collapse" id="menu">
+					<ul class="nav navbar-nav navbar-right">
+						<!-- Liens conditionnels selon le statut de connexion -->
+						$(if login-by)
+							<!-- Utilisateur connecté -->
+							<li>
+								<a style="margin-top: 0; color: #28a745; transition: all 0.3s ease; padding: 10px 15px;" href="status.html">
+									<b>Status</b>
+								</a>
+							</li>
+							<li>
+								<a style="margin-top: 0; color: #dc3545; transition: all 0.3s ease; padding: 10px 15px;" href="logout?erase-cookie=true">
+									<b>Déconnexion</b>
+								</a>
+							</li>
+						$(else)
+							<!-- Utilisateur non connecté -->
+							<li>
+								$(if trial == 'yes')
+								<a style="margin-top: 0; color: #ff9500; transition: all 0.3s ease; padding: 10px 15px;" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+									<b>Essaie</b>
+								</a>
+								$(endif)
+							</li>
+							<li>
+								<a style="margin-top: 0; color: #007bff; transition: all 0.3s ease; padding: 10px 15px;" href="login.html">
+									<b>Connexion</b>
+								</a>
+							</li>
+						$(endif)
+						
+						<!-- Liens de navigation communs -->
+						<li class="active">
+							<a style="margin-top: 0; box-shadow: 0 8px 20px rgba(102, 16, 242, 0.4); background: linear-gradient(135deg, #6610f2 0%, #520dc2 100%); color: white; border-radius: 15px; transform: translateY(-3px); transition: all 0.3s ease; padding: 10px 15px; font-weight: bold;" href="package.html">
+								<b>Tarifs</b>
+							</a>
+						</li>
+						<li>
+							<a style="margin-top: 0; color: #17a2b8; transition: all 0.3s ease; padding: 10px 15px;" href="https://ticketwifi.com/tickets/pay_ticket_of/6633">
+								<b>Contactez nous</b>
+							</a>
+						</li>
+						<li>
+							<a style="margin-top: 0; color: #fd7e14; transition: all 0.3s ease; padding: 10px 15px;" href="about.html">
+								<b>Infos</b>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>			
+		<!-- Container principal des tarifs -->
+		<div class="container-login100 package">
+			<div style="background: transparent;" class="wrap-login100">
+				<div style="width: 1200px" class="login100-form">
+					<!-- Titre principal -->
+					<span style="color:#ffffff; text-shadow: 0 2px 10px rgba(79, 172, 254, 0.3);" class="login100-form-title">
+						<i class="fa fa-money" aria-hidden="true" style="color: #ffa726;"></i> LES PRIX Internet
+					</span>
+					<br>
+					
+					<!-- Section des forfaits -->
+					<div class="pricing">
+						<!-- ============================ -->
+						<!-- PREMIÈRE LIGNE - 4 FORFAITS -->
+						<!-- ============================ -->
+						<div class="row pricing_row">
+							<!-- =================== -->
+							<!-- FORFAIT 30 MINUTES -->
+							<!-- Prix: 100 CFA       -->
+							<!-- =================== -->
+							<div class="col-sm-3">
+								<div class="pricing_item trans_200">
+									<div class="pricing_item_background trans_200"></div>
+									
+									<!-- En-tête du forfait -->
+									<div class="pricing_title_container d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_title_background trans_200">
+											<svg class="waves" width="100%" height="75%" viewBox="0 0 1920 218" preserveAspectRatio="none">
+												<path class="wave_path trans_200" fill="url(#grad_1)" d="M0,0 V210 S500,218 860,193  S1400,125 1920,155 V0 H0"></path>
+												<defs>
+													<linearGradient id="grad_1">
+														<stop offset="0%" stop-color="#4facfe" />
+														<stop offset="100%" stop-color="#3c8185" />
+													</linearGradient>
+													<linearGradient id="grad_2">
+														<stop offset="0%" stop-color="#007bff" />
+														<stop offset="100%" stop-color="#0056b3" />
+													</linearGradient>
+												</defs>
+											</svg>
+										</div>
+										<div class="pricing_title" data-package="30min">30 Minutes</div>
+										<div class="pricing_price">100 CFA<div>30 Minutes</div></div>
+									</div>
+									
+									<!-- Contenu du forfait -->
+									<div class="pricing_content d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_list">
+											<ul class="d-flex flex-column align-items-center justify-content-start">
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Vitesse 512k / 1M</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Data illimité</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Utilisateur 1</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>24h/24h</div>
+												</li>
+											</ul>
+										</div>
+										<center><div class="button pricing_button trans_200" style="background: linear-gradient(135deg, #4facfe 0%, #3c8185 100%); border: none; border-radius: 25px; box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4); transition: all 0.3s ease; padding: 12px 25px;"><a href="https://ticketwifi.com/tickets/pay_ticket_of/6625" style="color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; justify-content: center;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffa726; font-size: 32px; margin-right: 8px;"></i>Achetez</a></div></center>
+									</div>
+								</div>
+							</div>
+
+							<!-- Forfait 1 Heure -->
+							<div class="col-sm-3">
+								<div class="pricing_item trans_200">
+									<div class="pricing_item_background trans_200"></div>
+									<div class="pricing_title_container d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_title_background trans_200">
+											<svg class="waves" width="100%" height="75%" viewBox="0 0 1920 218" preserveAspectRatio="none">
+												<path class="wave_path trans_200" fill="url(#grad_1)" d="M0,0 V210 S500,218 860,193  S1400,125 1920,155 V0 H0"></path>
+											</svg>
+										</div>
+										<div class="pricing_title" data-package="1hour">1 Heure</div>
+										<div class="pricing_price">200 CFA<div>1 Heure</div></div>
+									</div>
+									<div class="pricing_content d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_list">
+											<ul class="d-flex flex-column align-items-center justify-content-start">
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Vitesse 512k / 1M</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Data illimité</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Utilisateur 1</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>24h/24h</div>
+												</li>
+											</ul>
+										</div>
+										<center><div class="button pricing_button trans_200" style="background: linear-gradient(135deg, #4facfe 0%, #3c8185 100%); border: none; border-radius: 25px; box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4); transition: all 0.3s ease; padding: 12px 25px;"><a href="https://ticketwifi.com/tickets/pay_ticket_of/6627" style="color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; justify-content: center;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffa726; font-size: 32px; margin-right: 8px;"></i>Achetez</a></div></center>
+
+									</div>
+								</div>
+							</div>
+
+							<!-- Forfait 2 Heures -->
+							<div class="col-sm-3">
+								<div class="pricing_item trans_200">
+									<div class="pricing_item_background trans_200"></div>
+									<div class="pricing_title_container d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_title_background trans_200">
+											<svg class="waves" width="100%" height="75%" viewBox="0 0 1920 218" preserveAspectRatio="none">
+												<path class="wave_path trans_200" fill="url(#grad_1)" d="M0,0 V210 S500,218 860,193  S1400,125 1920,155 V0 H0"></path>
+											</svg>
+										</div>
+										<div class="pricing_title" data-package="2hours">2 Heures</div>
+										<div class="pricing_price">350 CFA<div>2 Heures</div></div>
+									</div>
+									<div class="pricing_content d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_list">
+											<ul class="d-flex flex-column align-items-center justify-content-start">
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Vitesse 768k/ 1M</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Data illimité</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Utilisateur 2</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>24h/24h</div>
+												</li>
+											</ul>
+										</div>
+										<center><div class="button pricing_button trans_200" style="background: linear-gradient(135deg, #4facfe 0%, #3c8185 100%); border: none; border-radius: 25px; box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4); transition: all 0.3s ease; padding: 12px 25px;"><a href="https://ticketwifi.com/tickets/pay_ticket_of/6628" style="color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; justify-content: center;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffa726; font-size: 32px; margin-right: 8px;"></i>Achetez</a></div></center>
+									</div>
+								</div>
+							</div>
+							<!-- Forfait 1 Jour -->
+							<div class="col-sm-3">
+								<div class="pricing_item trans_200">
+									<div class="pricing_item_background trans_200"></div>
+									<div class="pricing_title_container d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_title_background trans_200">
+											<svg class="waves" width="100%" height="75%" viewBox="0 0 1920 218" preserveAspectRatio="none">
+												<path class="wave_path trans_200" fill="url(#grad_1)" d="M0,0 V210 S500,218 860,193  S1400,125 1920,155 V0 H0"></path>
+											</svg>
+										</div>
+										<div class="pricing_title" data-package="1day">1 Jour</div>
+										<div class="pricing_price">500 CFA<div>1 Jour</div></div>
+									</div>
+									<div class="pricing_content d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_list">
+											<ul class="d-flex flex-column align-items-center justify-content-start">
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>vitesse 1M / 1M</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Data illimité</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Utilisateur 3</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>24h/24h</div>
+												</li>
+											</ul>
+										</div>
+										<center><div class="button pricing_button trans_200" style="background: linear-gradient(135deg, #4facfe 0%, #3c8185 100%); border: none; border-radius: 25px; box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4); transition: all 0.3s ease; padding: 12px 25px;"><a href="https://ticketwifi.com/tickets/pay_ticket_of/6629" style="color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; justify-content: center;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffa726; font-size: 32px; margin-right: 8px;"></i>Achetez</a></div></center>
+									</div>
+								</div>
+							</div>							
+						</div>
+						
+						<!-- ============================= -->
+						<!-- DEUXIÈME LIGNE - FORFAITS     -->
+						<!-- LONGS TERMES                  -->
+						<!-- 3j | 1sem | 2sem | 1mois      -->
+						<!-- ============================= -->
+						<div class="row pricing_row" style="margin-top: 30px;">
+							<!-- ===================== -->
+							<!-- FORFAIT 3 JOURS      -->
+							<!-- Prix: 800 CFA        -->
+							<!-- ===================== -->
+							<div class="col-sm-3">
+								<div class="pricing_item trans_200">
+									<div class="pricing_item_background trans_200"></div>
+									<div class="pricing_title_container d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_title_background trans_200">
+											<svg class="waves" width="100%" height="75%" viewBox="0 0 1920 218" preserveAspectRatio="none">
+												<path class="wave_path trans_200" fill="url(#grad_1)" d="M0,0 V210 S500,218 860,193  S1400,125 1920,155 V0 H0"></path>
+											</svg>
+										</div>
+										<div class="pricing_title" data-package="3days">3 Jours</div>
+										<div class="pricing_price">800 CFA<div>72 Heures</div></div>
+									</div>
+									<div class="pricing_content d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_list">
+											<ul class="d-flex flex-column align-items-center justify-content-start">
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Vitesse 768k / 1M</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Data illimité</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Utilisateur 2</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>24h/24h</div>
+												</li>
+											</ul>
+										</div>
+										<center><div class="button pricing_button trans_200" style="background: linear-gradient(135deg, #4facfe 0%, #3c8185 100%); border: none; border-radius: 25px; box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4); transition: all 0.3s ease; padding: 12px 25px;"><a href="https://ticketwifi.com/tickets/pay_ticket_of/6630" style="color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; justify-content: center;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffa726; font-size: 32px; margin-right: 8px;"></i>Achetez</a></div></center>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Forfait 1 Semaine - 2000 CFA -->
+							<div class="col-sm-3">
+								<div class="pricing_item trans_200">
+									<div class="pricing_item_background trans_200"></div>
+									<div class="pricing_title_container d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_title_background trans_200">
+											<svg class="waves" width="100%" height="75%" viewBox="0 0 1920 218" preserveAspectRatio="none">
+												<path class="wave_path trans_200" fill="url(#grad_1)" d="M0,0 V210 S500,218 860,193  S1400,125 1920,155 V0 H0"></path>
+											</svg>
+										</div>
+										<div class="pricing_title" data-package="1week">1 Semaine</div>
+										<div class="pricing_price">2.000 CFA<div>1 Semaine</div></div>
+									</div>
+									<div class="pricing_content d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_list">
+											<ul class="d-flex flex-column align-items-center justify-content-start">
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Vitesse 768k / 1M</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Data illimité</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Utilisateur 2</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>24h/24h</div>
+												</li>
+											</ul>
+										</div>
+										<center><div class="button pricing_button trans_200" style="background: linear-gradient(135deg, #4facfe 0%, #3c8185 100%); border: none; border-radius: 25px; box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4); transition: all 0.3s ease; padding: 12px 25px;"><a href="https://ticketwifi.com/tickets/pay_ticket_of/6631" style="color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; justify-content: center;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffa726; font-size: 32px; margin-right: 8px;"></i>Achetez</a></div></center>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Forfait 2 Semaines - 3500 CFA -->
+							<div class="col-sm-3">
+								<div class="pricing_item trans_200">
+									<div class="pricing_item_background trans_200"></div>
+									<div class="pricing_title_container d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_title_background trans_200">
+											<svg class="waves" width="100%" height="75%" viewBox="0 0 1920 218" preserveAspectRatio="none">
+												<path class="wave_path trans_200" fill="url(#grad_1)" d="M0,0 V210 S500,218 860,193  S1400,125 1920,155 V0 H0"></path>
+											</svg>
+										</div>
+										<div class="pricing_title" data-package="2weeks">2 Semaines</div>
+										<div class="pricing_price">3.500 CFA<div>2 Semaines</div></div>
+									</div>
+									<div class="pricing_content d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_list">
+											<ul class="d-flex flex-column align-items-center justify-content-start">
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Vitesse 1M / 1M</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Data illimité</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Utilisateur 3</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>24h/24h</div>
+												</li>
+											</ul>
+										</div>
+										<center><div class="button pricing_button trans_200" style="background: linear-gradient(135deg, #4facfe 0%, #3c8185 100%); border: none; border-radius: 25px; box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4); transition: all 0.3s ease; padding: 12px 25px;"><a href="https://ticketwifi.com/tickets/pay_ticket_of/6632" style="color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; justify-content: center;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffa726; font-size: 32px; margin-right: 8px;"></i>Achetez</a></div></center>
+									</div>
+								</div>
+							</div>
+							
+							<!-- Forfait 1 Mois - 6000 CFA -->
+							<div class="col-sm-3">
+								<div class="pricing_item trans_200">
+									<div class="pricing_item_background trans_200"></div>
+									<div class="pricing_title_container d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_title_background trans_200">
+											<svg class="waves" width="100%" height="75%" viewBox="0 0 1920 218" preserveAspectRatio="none">
+												<path class="wave_path trans_200" fill="url(#grad_1)" d="M0,0 V210 S500,218 860,193  S1400,125 1920,155 V0 H0"></path>
+											</svg>
+										</div>
+										<div class="pricing_title" data-package="1month">1 Mois</div>
+										<div class="pricing_price">6.000 CFA<div>1 Mois</div></div>
+									</div>
+									<div class="pricing_content d-flex flex-column align-items-center justify-content-start">
+										<div class="pricing_list">
+											<ul class="d-flex flex-column align-items-center justify-content-start">
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>vitesse 1M / 1M</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Data illimité</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>Utilisateur 3</div>
+												</li>
+												<li class="d-flex flex-row align-items-center justify-content-start">
+													<div class="pricing_icon d-flex flex-column align-items-center justify-content-center">
+														<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 26 26" enable-background="new 0 0 26 26" width="26px" height="26px">
+															<path class="check_svg trans_200" d="m.3,14c-0.2-0.2-0.3-0.5-0.3-0.7s0.1-0.5 0.3-0.7l1.4-1.4c0.4-0.4 1-0.4 1.4,0l.1,.1 5.5,5.9c0.2,0.2 0.5,0.2 0.7,0l13.4-13.9h0.1v-8.88178e-16c0.4-0.4 1-0.4 1.4,0l1.4,1.4c0.4,0.4 0.4,1 0,1.4l0,0-16,16.6c-0.2,0.2-0.4,0.3-0.7,0.3-0.3,0-0.5-0.1-0.7-0.3l-7.8-8.4-.2-.3z" fill="#4facfe"/>
+														</svg>
+													</div>
+													<div>24h/24h</div>
+												</li>
+											</ul>
+										</div>
+										<center><div class="button pricing_button trans_200" style="background: linear-gradient(135deg, #4facfe 0%, #3c8185 100%); border: none; border-radius: 25px; box-shadow: 0 8px 20px rgba(79, 172, 254, 0.4); transition: all 0.3s ease; padding: 12px 25px;"><a href="https://ticketwifi.com/tickets/pay_ticket_of/6633" style="color: white; text-decoration: none; font-weight: bold; display: flex; align-items: center; justify-content: center;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffa726; font-size: 32px; margin-right: 8px;"></i>Achetez</a></div></center>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- ============================= -->
+					<!-- FOOTER COPYRIGHT              -->
+					<!-- ============================= -->
+					<div class="text-center p-t-136">
+						<a class="txt2" href="https://www.youtube.com/@swservices" style="color: #17a2b8; transition: all 0.3s ease; text-decoration: none;">
+							2025 &copy; Copyright SWS
+						</a>
+					</div>									
+
+				</div>					
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/custom.js"></script>
+</body>
+</html>

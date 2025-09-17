@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>$(identity) - Contactez nous</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="limiter">
+        <nav style="margin-bottom: 0" class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar top-bar"></span>
+	                    <span class="icon-bar middle-bar"></span>
+	                    <span class="icon-bar bottom-bar"></span>
+	                </button>
+	                <a style="padding-top: 8px" class="navbar-brand" href="login.html">
+	                    <img style="margin-top: -2px" width="50" alt="logo" src="images/brand.png" class="img-responsive">
+	                </a>
+        		</div>
+	            <div class="collapse navbar-collapse" id="menu">
+	                <ul class="nav navbar-nav navbar-right">
+	                $(if login-by)  	
+	                    <li>
+	                        <a style="margin-top: 0" href="status.html">
+	                            <b>Statuts</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="logout?erase-cookie=true">
+	                            <b>Déconnexion</b>
+	                        </a>
+	                    </li>
+	                $(else)
+	                    <li>
+	                        $(if trial == 'yes')
+	                        <a style="margin-top: 0" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+	                            <b>Essaie</b>
+	                        </a>
+	                        $(endif)
+	                    </li>	                
+	                    <li>
+	                        <a style="margin-top: 0" href="login.html">
+	                            <b>Connexion</b>
+	                        </a>
+	                    </li>
+	                $(endif) 
+	                    <li>
+	                        <a style="margin-top: 0" href="package.html">
+	                            <b>Tarifs</b>
+	                        </a>
+	                    </li>
+	                    <li class="active">
+	                        <a style="margin-top: 0" href="contact.html">
+	                            <b>Contactez nous</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="about.html">
+	                            <b>Infos</b>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+    		</div>
+   		</nav>			
+		<div class="container-login100">
+			<div class="wrap-login100">
+				<div class="login100-form">
+					<span class="login100-form-title">
+						<i class="fa fa-address-book" aria-hidden="true"></i> Contactez Nous
+						<hr style="margin-top: 15px">
+                        <p style="text-align:justify;">
+							<b>Pour Acheter l'heure :</b><br>
+							<a href="https://ticketwifi.com/tickets/pay_ticket_of/6625" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit; margin: 5px 0;"><button title="Acheter 30 Minutes" style="background: linear-gradient(135deg, #ff6b6b 0%, #e55555 100%); border: none; border-radius: 8px; padding: 6px 10px; margin-right: 10px; box-shadow: 0 4px 8px rgba(255, 107, 107, 0.3); transition: all 0.3s ease;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffffff; font-size: 14px;"></i></button><i class="fa fa-clock-o" aria-hidden="true"></i>=>  30 Minutes = 100 CFA</a><br>
+							<a href="https://ticketwifi.com/tickets/pay_ticket_of/6627" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit; margin: 5px 0;"><button title="Acheter 1 Heure" style="background: linear-gradient(135deg, #4ecdc4 0%, #42b8b0 100%); border: none; border-radius: 8px; padding: 6px 10px; margin-right: 10px; box-shadow: 0 4px 8px rgba(78, 205, 196, 0.3); transition: all 0.3s ease;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffffff; font-size: 14px;"></i></button><i class="fa fa-clock-o " aria-hidden="true"></i>   => 1 Heure = 200 CFA</a><br>
+							<a href="https://ticketwifi.com/tickets/pay_ticket_of/6628" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit; margin: 5px 0;"><button title="Acheter 2 Heures" style="background: linear-gradient(135deg, #45b7d1 0%, #3498db 100%); border: none; border-radius: 8px; padding: 6px 10px; margin-right: 10px; box-shadow: 0 4px 8px rgba(69, 183, 209, 0.3); transition: all 0.3s ease;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffffff; font-size: 14px;"></i></button><i class="fa fa-clock-o" aria-hidden="true"></i> => 2 Heures = 350 CFA</a><br>
+							<a href="https://ticketwifi.com/tickets/pay_ticket_of/6629" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit; margin: 5px 0;"><button title="Acheter 1 Jour" style="background: linear-gradient(135deg, #f9ca24 0%, #f0b90b 100%); border: none; border-radius: 8px; padding: 6px 10px; margin-right: 10px; box-shadow: 0 4px 8px rgba(249, 202, 36, 0.3); transition: all 0.3s ease;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffffff; font-size: 14px;"></i></button><i class="fa fa-sun-o" aria-hidden="true"></i> => 1 Jour = 500 CFA</a><br>
+							<a href="https://ticketwifi.com/tickets/pay_ticket_of/6630" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit; margin: 5px 0;"><button title="Acheter 3 Jours" style="background: linear-gradient(135deg, #6c5ce7 0%, #5f3dc4 100%); border: none; border-radius: 8px; padding: 6px 10px; margin-right: 10px; box-shadow: 0 4px 8px rgba(108, 92, 231, 0.3); transition: all 0.3s ease;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffffff; font-size: 14px;"></i></button><i class="fa fa-sun-o" aria-hidden="true"></i> => 3 Jours = 800 CFA</a><br>
+							<a href="https://ticketwifi.com/tickets/pay_ticket_of/6631" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit; margin: 5px 0;"><button title="Acheter 1 Semaine" style="background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%); border: none; border-radius: 8px; padding: 6px 10px; margin-right: 10px; box-shadow: 0 4px 8px rgba(253, 121, 168, 0.3); transition: all 0.3s ease;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffffff; font-size: 14px;"></i></button><i class="fa fa-calendar-o" aria-hidden="true"></i> => 1 Semaine = 2.000 CFA</a><br>
+							<a href="https://ticketwifi.com/tickets/pay_ticket_of/6632" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit; margin: 5px 0;"><button title="Acheter 2 Semaines" style="background: linear-gradient(135deg, #00b894 0%, #00a085 100%); border: none; border-radius: 8px; padding: 6px 10px; margin-right: 10px; box-shadow: 0 4px 8px rgba(0, 184, 148, 0.3); transition: all 0.3s ease;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffffff; font-size: 14px;"></i></button><i class="fa fa-calendar-o" aria-hidden="true"></i> => 2 Semaines = 3.500 CFA</a><br>
+							<a href="https://ticketwifi.com/tickets/pay_ticket_of/6633" style="display: inline-flex; align-items: center; text-decoration: none; color: inherit; margin: 5px 0;"><button title="Acheter 1 Mois" style="background: linear-gradient(135deg, #e17055 0%, #d63031 100%); border: none; border-radius: 8px; padding: 6px 10px; margin-right: 10px; box-shadow: 0 4px 8px rgba(225, 112, 85, 0.3); transition: all 0.3s ease;"><i class="fa fa-shopping-cart" aria-hidden="true" style="color: #ffffff; font-size: 14px;"></i></button><i class="fa fa-calendar" aria-hidden="true"></i>  => 1 Mois = 6.000 CFA</a><br>
+							
+						</p>
+							<hr>
+							<p style="text-align:justify;margin:20px auto;font-size:17px;color:#337ab7;" >
+								<i class="fa fa-user" aria-hidden="true"></i> Mobile : +225 05 06 62 82 14<br>
+								<i class="fa fa-whatsapp" aria-hidden="true"></i> WhatsApp : +225 07 47 19 05 14
+							</p> 					                  
+							
+					</span>
+					<div class="text-center p-t-136">
+						<hr>
+						<a class="txt2" href="https://www.youtube.com/@swservices">
+							2025 &copy; Copyright SWS
+						</a>
+					</div>											
+				</div>					
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/custom.js"></script>
+</body>
+</html>

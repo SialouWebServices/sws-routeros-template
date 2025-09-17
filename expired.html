@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>$(identity) - Expired</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="limiter">
+        <nav style="margin-bottom: 0" class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar top-bar"></span>
+	                    <span class="icon-bar middle-bar"></span>
+	                    <span class="icon-bar bottom-bar"></span>
+	                </button>
+	                <a style="padding-top: 8px" class="navbar-brand" href="login.html">
+	                    <img style="margin-top: -2px" width="50" alt="logo" src="images/brand.png" class="img-responsive">
+	                </a>
+        		</div>
+	            <div class="collapse navbar-collapse" id="menu">
+	                <ul class="nav navbar-nav navbar-right">
+	                    <li>
+	                        $(if trial == 'yes')
+	                        <a style="margin-top: 0" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+	                            <b>Essaie</b>
+	                        </a>
+	                        $(endif)
+	                    </li>	                	
+	                    <li>
+	                        <a style="margin-top: 0" href="login.html">
+	                            <b>Connexion</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="package.html">
+	                            <b>Tarifs</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="contact.html">
+	                            <b>Contactez nous</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="about.html">
+	                            <b>Infos</b>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+    		</div>
+   		</nav>			
+		<div class="container-login100 package">
+			<div class="wrap-login100">
+				<div style="width: 700px" class="login100-form">
+					<span class="login100-form-title">
+						<i class="fa fa-clock-o" aria-hidden="true"></i> Expirer
+						<hr style="margin-top: 15px">
+	                    <div class="row">
+
+	                        <p class="col-sm-12" style="font-size: 14px;text-align: justify;">La Magie de la sécurité réseau Chez Nous.
+	                        Pour les Tarifs  WiFi <u><a href="contact.html">Contactez Nous</a></u>.
+	                        <br>
+	                        <br>
+	                        <span style="margin-bottom: 10px">
+	                        Par ASSI Alexis
+	                        <br>
+	                        MNA (Mikrotik Network Administrator)
+	                        </span>
+	                        </p>
+	                        <br>
+	                    </div>
+	                    <hr style="margin-top: 15px">
+	                    <div class="row">
+	                        <center style="margin-top: 10px;margin-bottom: 10px">
+	                            <img height="18" src="images/mikrotik.png" />
+	                            <img height="26" src="images/ubiquiti.png" />
+	                            <img height="18" src="images/tplink.png" />
+	                        </center>
+	                    </div>
+					</span>
+					<div class="text-center p-t-136">
+						<hr style="margin-top: -10px">
+						<a class="txt2" href="https://fb.me/mnatogo">
+							2020 &copy; Copyright MNA
+						</a>
+					</div>											
+				</div>					
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/custom.js"></script>
+</body>
+</html>

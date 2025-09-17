@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>$(identity) - Infos</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+	<div class="limiter">
+        <nav style="margin-bottom: 0" class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+	                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menu" aria-expanded="false">
+	                    <span class="sr-only">Toggle navigation</span>
+	                    <span class="icon-bar top-bar"></span>
+	                    <span class="icon-bar middle-bar"></span>
+	                    <span class="icon-bar bottom-bar"></span>
+	                </button>
+	                <a style="padding-top: 8px" class="navbar-brand" href="login.html">
+	                    <img style="margin-top: -2px" width="50" alt="logo" src="images/brand.png" class="img-responsive">
+	                </a>
+        		</div>
+	            <div class="collapse navbar-collapse" id="menu">
+	                <ul class="nav navbar-nav navbar-right">
+	                $(if login-by)  	
+	                    <li>
+	                        <a style="margin-top: 0" href="status.html">
+	                            <b>Statuts</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="logout?erase-cookie=true">
+	                            <b>Déconexion</b>
+	                        </a>
+	                    </li>
+	                $(else)
+	                    <li>
+	                        $(if trial == 'yes')
+	                        <a style="margin-top: 0" href="$(link-login-only)?dst=$(link-orig-esc)&amp;username=T-$(mac-esc)">
+	                            <b>Essaie</b>
+	                        </a>
+	                        $(endif)
+	                    </li>	                
+	                    <li>
+	                        <a style="margin-top: 0" href="login.html">
+	                            <b>Connexion</b>
+	                        </a>
+	                    </li>
+	                $(endif) 
+	                    <li>
+	                        <a style="margin-top: 0" href="package.html">
+	                            <b>Tarifs</b>
+	                        </a>
+	                    </li>
+	                    <li>
+	                        <a style="margin-top: 0" href="contact.html">
+	                            <b>Contactez nous</b>
+	                        </a>
+	                    </li>
+	                    <li class="active">
+	                        <a style="margin-top: 0" href="about.html">
+	                            <b>Infos</b>
+	                        </a>
+	                    </li>
+	                </ul>
+	            </div>
+    		</div>
+   		</nav>			
+		<div class="container-login100 package">
+			<div class="wrap-login100 ">
+				<div style="width: 600px" class="login100-form">
+					<span class="login100-form-title">
+						<i class="fa fa-info-circle" aria-hidden="true"></i> Sialou Web Services (SWS)
+						<hr style="margin-top: 15px">                                
+                                <p style="text-align:justify;">
+									SWS est un Startup en réseau informatique. Créer en 2020 par <b>SIALOU Rodrigue</b>. </u></i></p>
+                                <p style="text-align:justify;">
+                                </p>
+                                <br>
+                                <p style="text-align:left;color:green;margin-bottom: 10px">Nos Services</p>
+                                <ul style="text-align:justify;font-family: 'Source Sans Pro';font-size: 16px">
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Installation Cyber , WifiZone (Hostpot)</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Formation en Mikrotik</li>
+                                    <li><i class="fa fa-check" aria-hidden="true"></i> Vente des Scripts Mikrotik</li>
+									<li><i class="fa fa-check" aria-hidden="true"></i> Vente des Cours en PDF </li>
+									<li><i class="fa fa-check" aria-hidden="true"></i> Vente des produit Mikrotik</li>
+                                </ul>
+                                <br>    
+                                <p style="text-align:left;color:green;margin-bottom: 10px">SWS Security+</p>
+                                <p style="text-align:justify;">
+									<u>MNA Security+</u> :
+                                </p>
+                                <ul style="text-align:justify;font-family: 'Source Sans Pro';font-size: 16px;margin-top: 10px">
+                                    
+									<li><i class="fa fa-check" aria-hidden="true"></i> Optimisation VOIP</li>
+									<li><i class="fa fa-check" aria-hidden="true"></i> Accès VPN</li>
+									<li><i class="fa fa-check" aria-hidden="true"></i> VLAN</li>
+									<li><i class="fa fa-check" aria-hidden="true"></i> Qos</li>	
+									<li><i class="fa fa-check" aria-hidden="true"></i> ...</li>												
+                                </ul>                                
+					</span>	
+					<p style="text-align:justify;margin:20px auto;font-size:17px;color:#337ab7;" >
+						<a href="https://wa.me/+2250747190514" target="_blank" style="color: #25D366; text-decoration: none;">
+							<i class="fa fa-whatsapp" aria-hidden="true"></i> Ecrire par WhatsApp
+						</a><br>
+						<i class="fa fa-phone" aria-hidden="true"></i> 07 47 19 05 14</p>
+					</p>
+					<div class="text-center p-t-136">ss
+						<hr>
+						<a class="txt2" href="https://www.youtube.com/@swservices">
+							2025 &copy; Copyright SWS
+						</a>
+					</div>											
+				</div>					
+			</div>
+		</div>
+	</div>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>	
+	<script src="js/custom.js"></script>
+</body>
+</html>

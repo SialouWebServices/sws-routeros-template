@@ -1,0 +1,227 @@
+/* ==================================================== */
+/* STYLES BOUTONS RELIEF POUR TITRES DE FORFAITS      */
+/* ==================================================== */
+
+/* Style de base pour tous les titres en forme de bouton */
+.pricing_title {
+  /* Apparence bouton */
+  background: linear-gradient(145deg, #ffffff, #e6e6e6) !important;
+  border: 2px solid #ddd !important;
+  border-radius: 15px !important;
+  padding: 15px 20px !important;
+  margin: 10px auto !important;
+  
+  /* Typographie */
+  font-size: 14px !important;
+  font-weight: 800 !important;
+  color: #333 !important;
+  text-align: center !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  
+  /* Effet relief 3D */
+  box-shadow: 
+    0 8px 15px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(255, 255, 255, 0.8),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
+  
+  /* Transition */
+  transition: all 0.3s ease !important;
+  
+  /* Positionnement */
+  position: relative !important;
+  z-index: 10 !important;
+  display: inline-block !important;
+  width: auto !important;
+  max-width: 90% !important;
+}
+
+/* Effet de survol - Bouton enfoncé */
+.pricing_item:hover .pricing_title {
+  transform: translateY(2px) !important;
+  box-shadow: 
+    0 4px 8px rgba(0, 0, 0, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.6),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ==================================================== */
+/* STYLES SPÉCIFIQUES PAR FORFAIT AVEC COULEURS       */
+/* ==================================================== */
+
+/* 30 MINUTES - Rouge Corail */
+.pricing_title[data-package="30min"] {
+  background: linear-gradient(145deg, #9b4d4d, #e55555) !important;
+  border: 2px solid #d63447 !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 
+    0 8px 15px rgba(255, 107, 107, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 1 HEURE - Turquoise */
+.pricing_title[data-package="1hour"] {
+  background: linear-gradient(145deg, #4ecdc4, #42b8b0) !important;
+  border: 2px solid #00a085 !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 
+    0 8px 15px rgba(78, 205, 196, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 2 HEURES - Bleu Ciel */
+.pricing_title[data-package="2hours"] {
+  background: linear-gradient(145deg, #45b7d1, #3498db) !important;
+  border: 2px solid #2980b9 !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 
+    0 8px 15px rgba(69, 183, 209, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 1 JOUR - Jaune Doré */
+.pricing_title[data-package="1day"] {
+  background: linear-gradient(145deg, #f9ca24, #f0b90b) !important;
+  border: 2px solid #e67e22 !important;
+  color: #2c3e50 !important;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5) !important;
+  box-shadow: 
+    0 8px 15px rgba(249, 202, 36, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.5),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* 3 JOURS - Violet */
+.pricing_title[data-package="3days"] {
+  background: linear-gradient(145deg, #6c5ce7, #5f3dc4) !important;
+  border: 2px solid #4c1d95 !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 
+    0 8px 15px rgba(108, 92, 231, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 1 SEMAINE - Rose */
+.pricing_title[data-package="1week"] {
+  background: linear-gradient(145deg, #fd79a8, #e84393) !important;
+  border: 2px solid #d63384 !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 
+    0 8px 15px rgba(253, 121, 168, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 2 SEMAINES - Vert Émeraude */
+.pricing_title[data-package="2weeks"] {
+  background: linear-gradient(145deg, #00b894, #00a085) !important;
+  border: 2px solid #00875f !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 
+    0 8px 15px rgba(0, 184, 148, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* 1 MOIS - Orange Terracotta */
+.pricing_title[data-package="1month"] {
+  background: linear-gradient(145deg, #e17055, #d63031) !important;
+  border: 2px solid #c0392b !important;
+  color: white !important;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: 
+    0 8px 15px rgba(225, 112, 85, 0.4),
+    inset 0 2px 4px rgba(255, 255, 255, 0.3),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* ==================================================== */
+/* EFFETS DE SURVOL SPÉCIFIQUES                        */
+/* ==================================================== */
+
+/* Effet survol pour chaque forfait */
+.pricing_item:hover .pricing_title[data-package="30min"] {
+  box-shadow: 
+    0 4px 8px rgba(255, 107, 107, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.pricing_item:hover .pricing_title[data-package="1hour"] {
+  box-shadow: 
+    0 4px 8px rgba(78, 205, 196, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.pricing_item:hover .pricing_title[data-package="2hours"] {
+  box-shadow: 
+    0 4px 8px rgba(69, 183, 209, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.pricing_item:hover .pricing_title[data-package="1day"] {
+  box-shadow: 
+    0 4px 8px rgba(249, 202, 36, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.pricing_item:hover .pricing_title[data-package="3days"] {
+  box-shadow: 
+    0 4px 8px rgba(108, 92, 231, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.pricing_item:hover .pricing_title[data-package="1week"] {
+  box-shadow: 
+    0 4px 8px rgba(253, 121, 168, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.pricing_item:hover .pricing_title[data-package="2weeks"] {
+  box-shadow: 
+    0 4px 8px rgba(0, 184, 148, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+.pricing_item:hover .pricing_title[data-package="1month"] {
+  box-shadow: 
+    0 4px 8px rgba(225, 112, 85, 0.6),
+    inset 0 1px 2px rgba(255, 255, 255, 0.2),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* ==================================================== */
+/* RESPONSIVE - AJUSTEMENTS MOBILES                    */
+/* ==================================================== */
+
+@media (max-width: 768px) {
+  .pricing_title {
+    font-size: 11px !important;
+    padding: 12px 15px !important;
+    margin: 8px auto !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing_title {
+    font-size: 9px !important;
+    padding: 10px 12px !important;
+    margin: 6px auto !important;
+  }
+}
