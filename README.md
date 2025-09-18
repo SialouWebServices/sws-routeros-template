@@ -216,7 +216,7 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 ## 👨‍💻 Auteur
 
-**SW Service** - *Développement initial* - [Site Web](https://swservice.carrd.co/)
+**SIALOU** - *Développement initial* - [Site Web](https://swservice.carrd.co/)
 
 ## 🙏 Remerciements
 
@@ -233,7 +233,7 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 ---
 
 <div align="center">
-  <strong>Développé avec ❤️ par SW Service</strong><br>
+  <strong>Développé avec ❤️ par Sialou Web Services</strong><br>
   <a href="https://swservice.carrd.co/">Site Web</a> • 
   <a href="mailto:contact@swservice.com">Contact</a>
 </div>
